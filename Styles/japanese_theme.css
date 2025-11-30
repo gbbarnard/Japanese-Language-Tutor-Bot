@@ -1,0 +1,126 @@
+:root {
+    --jp-red: #e60033;
+    /* traditional Japanese red */
+    --jp-pink: #ffe4ec;
+    /* sakura pink */
+    --jp-cream: #fff8f0;
+    /* washi paper cream */
+    --jp-navy: #1f2937;
+    /* deep ink navy */
+}
+
+/* Overall app background: soft sakura + washi feel */
+[data-testid="stAppViewContainer"]>.main {
+    background: radial-gradient(circle at top,
+            var(--jp-pink) 0%,
+            var(--jp-cream) 40%,
+            #f0f4ff 100%);
+    font-family: "Noto Sans JP", "Yu Gothic", "Hiragino Kaku Gothic ProN",
+        -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Make the default top bar transparent */
+[data-testid="stHeader"] {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Center content and keep it at a nice width */
+.block-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Chat message “washi card” style */
+[data-testid="stChatMessage"] {
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 18px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.9rem;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    position: relative;
+}
+
+/* Left accent bar like a shoji frame */
+[data-testid="stChatMessage"]::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    bottom: 0.75rem;
+    width: 4px;
+    border-radius: 999px;
+    background: linear-gradient(to bottom, var(--jp-red), var(--jp-pink));
+    opacity: 0.85;
+}
+
+/* Make title look a bit more “banner-like” */
+h1 {
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--jp-navy);
+}
+
+/* Description text */
+[data-testid="stMarkdownContainer"] p {
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* Explanation bullets spacing */
+[data-testid="stMarkdownContainer"] ul {
+    margin-top: 0.2rem;
+    margin-bottom: 0.4rem;
+}
+
+/* Chat input tray */
+[data-testid="stChatInput"] {
+    padding-top: 0.6rem;
+}
+
+/* Outer pill container */
+[data-testid="stChatInput"]>div {
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(148, 163, 184, 0.55);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+/* Text area inside the pill */
+[data-testid="stChatInput"] textarea {
+    border-radius: 999px !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    font-size: 0.95rem;
+}
+
+/* Placeholder color */
+[data-testid="stChatInput"] textarea::placeholder {
+    color: #9ca3af;
+}
+
+/* Send button (the arrow) */
+[data-testid="stChatInput"] button {
+    border-radius: 999px !important;
+    background: linear-gradient(135deg, var(--jp-red), #f97373) !important;
+    border: none !important;
+    box-shadow: 0 6px 14px rgba(239, 68, 68, 0.35);
+}
+
+/* Slight hover effect on send button */
+[data-testid="stChatInput"] button:hover {
+    filter: brightness(1.05);
+    transform: translateY(-0.5px);
+}
+
+/* Audio players: subtle border + rounded */
+audio {
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    background-color: #f9fafb;
+}
