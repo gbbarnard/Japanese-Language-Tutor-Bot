@@ -113,28 +113,49 @@ shorter clips for each key word / phrase mentioned in the explanation bullets.
 
  ## 5. Setup & Running the App
 **5.1. Clone the repository**
-- git clone https://github.com/gbbarnard/Japanese-Language-Tutor-Bot.git
-- cd Japanese-Language-Tutor-Bot
+
+``` git clone https://github.com/gbbarnard/Japanese-Language-Tutor-Bot.git ```
+
+``` cd Japanese-Language-Tutor-Bot ``` 
 
 **5.2. Create and activate a virtual environment (optional but recommended)**
-- python -m venv venv
+
+``` python -m venv venv ```
 
 **Windows**
-- venv\Scripts\activate
+
+``` venv\Scripts\activate ```
 
 **macOS / Linux**
-- source venv/bin/activate
+
+``` source venv/bin/activate ``` 
 
 **5.3. Install dependencies**
-pip install -r requirements.txt
+
+``` pip install -r requirements.txt ```
 
 **5.4. Set up API key**
 
 Create a file named .env in the project root:
 
-- COHERE_API_KEY=your_real_cohere_api_key_here
+``` COHERE_API_KEY=your_real_cohere_api_key_here ```
 
 If you dont want to get a key from Cohere, Request mine
 
 **5.5. Run the app**
-- streamlit run app.py
+
+``` streamlit run app.py ```
+
+## 6. Repository Contents
+
+This repository contains:
+
+- ```app.py``` – main Streamlit application (source code)
+
+- ```requirements.txt ``` – Python dependencies
+
+- ```README.md``` – this file (project overview and setup instructions)
+
+- ```Styles/style.css``` – custom styling for the Streamlit app
+
+- ```Final_Report.pdf``` – final project report submitted for CSI-4130
