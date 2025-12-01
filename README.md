@@ -140,6 +140,8 @@ Create a file named .env in the project root:
 
 ``` COHERE_API_KEY=your_real_cohere_api_key_here ```
 
+If you have trouble getting a Cohere API key, please contact me by email.
+
 **5.5. Run the app**
 
 ``` streamlit run app.py ```
